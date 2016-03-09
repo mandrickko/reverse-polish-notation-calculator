@@ -48,7 +48,7 @@ public class Calculator {
 		journalStack = new CalculatorStack<>();
 		operatorHashMap = new HashMap<>();
 		
-	    InputSource.setInputSource();
+	    	InputSource.setInputSource();
 		OutputFormatter.setOutputFormatter();	
 	}
 	
