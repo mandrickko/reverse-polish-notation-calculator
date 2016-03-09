@@ -39,7 +39,8 @@ public class Calculator {
 	
 	public static void main(String[] args) {
 		Calculator calculator = new Calculator();
-		calculator.start();
+		calculator.start(InputSource.scanner);
+
 	}
 	
 	public Calculator() {
@@ -47,6 +48,7 @@ public class Calculator {
 		journalStack = new CalculatorStack<>();
 		operatorHashMap = new HashMap<>();
 		
+	    InputSource.setInputSource();
 		OutputFormatter.setOutputFormatter();	
 	}
 	
@@ -64,14 +66,6 @@ public class Calculator {
 	
 	public String getUserInputLine() {
 		return userInputLine;
-	}
-
-	/**
-	 * Start the calculator and set the input device.
-	 */
-	public void start() {
-	    InputSource.setInputSource();
-		start(Settings.scanner);
 	}
 
 	/**
